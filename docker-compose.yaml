@@ -7,16 +7,16 @@ services:
     depends_on:
       - postgres
     environment:
-      DBURL: dpg-crngjso8fa8c738g0v0g-a.oregon-postgres.render.com/librarydb_kbws
-      DBNAME: librarydb_kbws
-      DBUSERNAME: postgresql
-      DBPASSWORD: k78f31qD3cUgkqVmGeZ6YlRltTSifAER
+      DBURL: postgres
+      DBNAME: library-app
+      DBUSERNAME: postgres
+      DBPASSWORD: postgres
 
   postgres:
     image: postgres
     ports:
       - 5432:5432
     environment:
-      POSTGRES_USER: postgresql
-      POSTGRES_PASSWORD: k78f31qD3cUgkqVmGeZ6YlRltTSifAER
-      POSTGRES_DB: librarydb_kbws
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: library-app
